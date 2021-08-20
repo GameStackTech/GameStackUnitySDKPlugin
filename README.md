@@ -69,6 +69,9 @@ You will need to collect the following information from the user in order to com
 The following is an example of calling the `CreateGameStackUser` API.
 
 ```csharp
+using GameStackUnitySDK;
+using GameStackUnitySDK.Model.Errors;
+
 // Some method called by your game when the player is ready to create their GameStack account.
 // Could be a button on click event or some other user triggered event.
 void CreatePlayer()
