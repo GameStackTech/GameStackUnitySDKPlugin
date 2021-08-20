@@ -2,11 +2,11 @@
 The GameStack Unity engine SDK is provided as a .NET Standard 2.0 managed plugin DLL.
 
 # Integrate the GameStackUnitySDKPlugin with your Unity project
-To start using the GameStack API in your game you will need to add the GameStack plugin to your project. GameStack provides both a Debug and Release build that you can choose from. To install the GameStack plugin copy the `GameStackUnitySDK.dll` file to somewhere in your projects `Assets` folder (Example: `Assets` -> `ManagedPlugins` -> `GameStackUnitySDK.dll`).
+To start using the GameStack API in your game you will need to add the GameStack plugin to your project. GameStack provides both a **Debug** and **Release** build that you can choose from. To install the GameStack plugin copy the `GameStackUnitySDK.dll` file to somewhere in your projects `Assets` folder (Example: `Assets` -> `ManagedPlugins` -> `GameStackUnitySDK.dll`).
 
-Once you have added the GameStack plugin to your Unity project you will need to add GameStack API calls to your application to authenticate users, allow users who do not have a GameStack account to signup for a GameStack account. Once your players can authenticate you will add API calls to upload and retrieve stats from your leaderboards. The following sections provide guidance on how to setup your GameStack player authentication flow and how to integration leaderboard API calls.
+Once you have added the GameStack plugin to your Unity project you will need to add GameStack API calls to your application to authenticate users and allow users who do not have a GameStack account to signup for a GameStack account. Once your players can authenticate you will add API calls to upload and retrieve stats from your leaderboards. The following sections provide guidance on how to setup your GameStack player authentication flow and how to integration leaderboard API calls.
 
-# Player auth and reation API integration
+# Player auth and creation API integration
 ## Player authentication (A.K.A. login)
 The first thing you will need to do is give the player a chance to login with their GameStack credentials. You will need to collect the following information from the user for login.
 
