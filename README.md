@@ -76,7 +76,8 @@ using GameStackUnitySDK.Model.Errors;
 // Could be a button on click event or some other user triggered event.
 void CreatePlayer()
 {
-    GameStackClient.Instance.CreateGameStackUser(username, email, password, realName, SignupSuccess, SignupFailed);
+    GameStackClient.Instance.CreateGameStackUser(
+        username, email, password, realName, SignupSuccess, SignupFailed);
 }
 
 // Callback that is run on successful GameStack player account creation.
@@ -100,5 +101,7 @@ void SignupFailed(Error error)
     // already taken.
 }
 ```
+
+## Player logout
 
 # Leaderboards API integration
