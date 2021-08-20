@@ -80,7 +80,7 @@ void CreatePlayer()
 }
 
 // Callback that is run on successful GameStack player account creation.
-void SignupSuccess(SignupSuccess response)
+void SignupSuccess(string response)
 {
     // The player account was successfully created.
     // Once the players GameStack account is created
