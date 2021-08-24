@@ -103,5 +103,36 @@ void SignupFailed(Error error)
 ```
 
 ## Player logout
+The `LogoutPlayer` API allows players to logout of their currently authenticated session. Once a player is logged out their access tokens are revoked and the player will need to log in again before they can make calls to the GameStack APIs again.
+
+The following is an example of calling the `LogoutPlayer` API.
+
+```csharp
+using GameStackUnitySDK;
+using GameStackUnitySDK.Model.Errors;
+
+// Some method called by your game when the player is ready to create their GameStack account.
+// Could be a button on click event or some other user triggered event.
+void CreatePlayer()
+{
+    GameStackClient.Instance.LogoutPlayer(LogoutSuccess, LogoutFailed);
+}
+
+// Callback that is run on successful GameStack player logout.
+void LogoutSuccess(string response)
+{
+    // The players authenticated session was ended.
+    // The player will need to autheticate again before
+    // they can use the GameStack API.
+}
+
+// Callback that is run when GameStack player logout fails.
+void SignupFailed(Error error)
+{
+    // You can get more information about the error
+    // by checking error.Code for the HTTP status code
+    // and error.Message for more iformation.
+}
+```
 
 # Leaderboards API integration
