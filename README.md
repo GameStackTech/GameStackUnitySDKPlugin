@@ -111,9 +111,10 @@ The following is an example of calling the `LogoutPlayer` API.
 using GameStackUnitySDK;
 using GameStackUnitySDK.Model.Errors;
 
-// Some method called by your game when the player is ready to create their GameStack account.
+// Some method called by your game when the player wants
+// to logout of their authenticated session.
 // Could be a button on click event or some other user triggered event.
-void CreatePlayer()
+void LogoutPlayer()
 {
     GameStackClient.Instance.LogoutPlayer(LogoutSuccess, LogoutFailed);
 }
