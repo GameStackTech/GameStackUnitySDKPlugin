@@ -10,10 +10,10 @@ Once you have added the GameStack plugin to your Unity project you will need to 
 ## Player authentication (A.K.A. login)
 The first thing you will need to do is give the player a chance to login with their GameStack credentials. You will need to collect the following information from the user for login.
 
-* username
+* `username`
   * Data type: string
   * Description: The players GameStack account username.
-* password
+* `password`
   * Data type: string
   * Description: The players GameStack account password.
 
@@ -48,21 +48,20 @@ void LoginFailed(Error error)
 ```
 
 ## Player creation
-If a player does not currently have a GameStack account you will want to give them the option to create a GameStack account right from the login screen. GameStack reccomends that you provide a clearly labeled link on the login page that allows users to create a GameStack account. See the [GameStackUnityDemo](https://github.com/GameStackTech/GameStackUnityDemo) login flow for an example.
-
+If a player does not currently have a GameStack account you will want to give them the option to create a GameStack account from the login screen. GameStack recommends that you provide a clearly labeled link on the login page that allows users to create a GameStack account. See the [GameStackUnityDemo](https://github.com/GameStackTech/GameStackUnityDemo) login flow for an example.
 
 You will need to collect the following information from the user in order to compelte GameStack player account creation.
 
-* username
+* `username`
   * Data type: string
   * Description: The username the player wants for the account.
-* email
+* `email`
   * Data type: string
   * Description: A valid email address to link to the account.
-* password
+* `password`
   * Data type: string
   * Description: The accounts password.
-* [Optional] realName
+* [Optional] `realName`
   * Data type: string
   * Description: The players IRL name.
 
@@ -137,3 +136,9 @@ void SignupFailed(Error error)
 ```
 
 # Leaderboards API integration
+
+## Create a play instance
+
+## Put stats
+
+## Get stats
