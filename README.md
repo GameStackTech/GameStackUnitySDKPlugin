@@ -135,10 +135,54 @@ void SignupFailed(Error error)
 }
 ```
 
-# Leaderboards API integration
+# Application API integration
+## Create user
+To put stats to leaderboards GameStack players need to be registered as users of your application. The `CreateApplicationUser` API will allow you to create an application user for your players if they do not already have one.
 
-## Create a play instance
+public void CreateApplicationUser(string applicationID, string alias,
+            UnityAction<string> callbackOnSuccess,
+            UnityAction<Error> callbackOnFail)
 
+You will need the following informaiton about your application.
+* `applicationID`
+  * Data type: string
+  * Description: The ID of the application to register the GameStack player as a user of.
+
+You will need to collect the following information from the user in order to compelte GameStack player account creation.
+
+* `alias`
+  * Data type: string
+  * Description: The alias the user wishes to use for the application.
+
+The following is an example of calling the `CreateApplicationUser` API.
+
+```csharp
+// Some method called by your game when the player wants
+// to register as a user of your application.
+// Could be a button on click event or some other user triggered event.
+public void CreateApplicationUser() {
+    GameStackClient.Instance.CreateApplicationUser(applicationID, alias,
+        CreateApplicationUserSuccess, CreateApplicationUserFailed);
+}
+
+// Callback that is run on successful application user creation.
+void CreateApplicationUserSuccess(string response)
+{
+    // The players authenticated session was ended.
+    // The player will need to autheticate again before
+    // they can use the GameStack API.
+}
+
+// Callback that is run when application user creation fails.
+void CreateApplicationUserFailed(Error error)
+{
+    // You can get more information about the error
+    // by checking error.Code for the HTTP status code
+    // and error.Message for more iformation.
+}
+```
+
+# Leaderboard API integration
 ## Put stats
 
 ## Get stats
